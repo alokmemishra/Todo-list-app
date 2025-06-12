@@ -22,7 +22,6 @@ router.post('/', async (req, res) => {
     title: req.body.title,
     description: req.body.description,
     priority: req.body.priority,
-    category: req.body.category,
     dueDate: req.body.dueDate,
   });
 
@@ -43,7 +42,6 @@ router.put('/:id', async (req, res) => {
     task.title = req.body.title ?? task.title;
     task.description = req.body.description ?? task.description;
     task.priority = req.body.priority ?? task.priority;
-    task.category = req.body.category ?? task.category;
     task.dueDate = req.body.dueDate ?? task.dueDate;
     task.completed = req.body.completed ?? task.completed;
 
